@@ -3,7 +3,7 @@
     v-model="props.block.details.value"
     class="py-1.5 border-l-3 border-black border-solid px-3"
   />
-  <div v-else v-html="props.block.details.value"
+  <div v-else v-html="getRenderedValue(props.block.details.value)"
     class="py-1.5 border-l-3 border-black border-solid px-3"></div>
 </template>
 
@@ -11,6 +11,7 @@
 import { PropType } from "vue";
 import { Block } from "@/utils/types";
 import Editor from "../elements/Editor.vue";
+import { getRenderedValue } from '@/utils/utils';
 
 const props = defineProps({
   block: {

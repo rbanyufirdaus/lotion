@@ -28,3 +28,7 @@ export function htmlToMarkdown (htmlString:string) {
     .replaceAll('</em>', '*')
     .replaceAll(/\<br.*?\>/g, '')
 }
+
+export const getRenderedValue = (value?: string): string => {
+  return markdownToHtml(value??"")
+}

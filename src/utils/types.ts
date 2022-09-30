@@ -3,7 +3,6 @@ import DividerBlock from '@/components/blocks/DividerBlock.vue'
 import HeadingBlock from '@/components/blocks/HeadingBlock.vue'
 import QuoteBlock from '@/components/blocks/QuoteBlock.vue'
 
-
 export interface Block {
   id: string,
   type: BlockType;
